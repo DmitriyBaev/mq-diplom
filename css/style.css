@@ -62,6 +62,10 @@ a {
   border: none;
 }
 
+.menu-button:hover {
+  cursor: pointer;
+}
+
 .button-text {
   width: 23px;
   height: 3px;
@@ -239,6 +243,7 @@ a {
   padding: 35px 25px;
   position: relative;
   z-index: 2;
+  flex-grow: 1;
 }
 
 .trend-name {
@@ -848,8 +853,6 @@ a {
   }
 }
 
-
-
 @media (min-width: 641px) and (max-width: 1199px) {
   .welcome {
     background-image: url(../images/banner-bg-tablet.jpg);
@@ -983,7 +986,6 @@ a {
 }
 
 @media (min-width: 1200px) {
- 
   .welcome {
     background-image: url(../images/banner-bg.jpg);
     padding-bottom: 145px;
@@ -991,18 +993,18 @@ a {
 
   .welcome-title {
     font-size: 45px;
-line-height: 75px;
+    line-height: 75px;
     margin-top: 120px;
     max-width: 700px;
   }
- 
-.logo {
-  width: 180px;
-}
 
-.menu-button {
-  display: none;
-}
+  .logo {
+    width: 180px;
+  }
+
+  .menu-button {
+    display: none;
+  }
 
   .head-menu {
     display: flex;
@@ -1028,88 +1030,104 @@ line-height: 75px;
 
   .trends-articles {
     display: flex;
-      }
+  }
 
   .trend {
     width: 25%;
     margin-right: 5px;
-      }
+  }
 
-      .trend:last-child {
-        margin-right: 0px;
-      }
+  .trend:last-child {
+    margin-right: 0px;
+  }
 
-      .page-content {
-        display: flex;
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-.main {
-  margin-right: 10%;
-  width: 65%;
+  .page-content {
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main {
+    margin-right: 10%;
+    width: 65%;
+  }
+
+  .article {
+    display: flex;
+    padding-bottom: 0px;
+    border-bottom: none;
+    margin-top: 55px;
+  }
+
+  .main-image {
+    width: 46%;
+    margin-right: 8%;
+  }
+
+  .article-content {
+    width: 46%;
+  }
+
+  .side-bar {
+    width: 25%;
+  }
+
+  .shop-articles {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shop-article {
+    width: calc(33.333% - 40px);
+    margin-right: 60px;
+    margin-bottom: 0px;
+  }
+
+  .footer {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shop-article:nth-child(3n + 3) {
+    margin-right: 0px;
+  }
 }
 
-      .article {
-        display: flex;
-        padding-bottom: 0px;
-        border-bottom: none;
-        margin-top: 55px;
-              }
+@media (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
+  .trends-articles {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-   .article-content {
-                padding-left: 35px;
-              }
+  .trend {
+    width: calc(50% - 2.5px);
+    margin-right: 5px;
+    box-sizing: border-box;
+  }
 
-              .side-bar {
-                width: 25%;
-              }
+  .trend:nth-child(even) {
+    margin-right: 0px;
+  }
+}
 
-              .shop-articles {
-                display: flex;
-                flex-wrap: wrap;
-                max-width: 1200px;
-                margin-left: auto;
-                margin-right: auto;
-              }
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .trend {
+    width: calc(25% - 15px / 4);
+    margin-right: 5px;
+  }
 
-              .shop-article {
-                width: calc(33.333% - 40px);
-                margin-right: 60px;
-                margin-bottom: 0px;
-              }
+  .trend:nth-child(even) {
+    margin-right: 5px;
+  }
 
-              .footer {
-                max-width: 1200px;
-                display: flex;
-                flex-direction: column;
-                margin-left: auto;
-                margin-right: auto;
-              }
-
-              .shop-article:nth-child(3n+3) {
-margin-right: 0px;
-              }
-
- @media (max-width: 640px) and (orientation: landscape) {
-                .trend {
-                  width: 50%;
-                  margin-right: 5px;
-                    }
-              
-                    .trend:last-child {
-                      margin-right: 0px;
-                    }
-              }
-
- @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
-                .trend {
-                  width: 25%;
-                  margin-right: 5px;
-                    }
-              
-                    .trend:last-child {
-                      margin-right: 0px;
-                    }
-              }
+  .trend:last-child {
+    margin-right: 0px;
+  }
+}
